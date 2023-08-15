@@ -15,11 +15,12 @@ export const counterSlice = createSlice({
       // immutable state based off those changes
       state.counter += 1;
     },
-    decrement: (state) => {
-      state.counter -= 1;
-    },
+    // New reducers
     incrementByAmount: (state, action) => {
       state.counter += action.payload;
+    },
+    decrement: (state) => {
+      state.counter -= 1;
     },
   },
 });

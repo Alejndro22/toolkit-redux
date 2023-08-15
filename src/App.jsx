@@ -1,5 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { increment } from './store/slices/counter';
+import {
+  increment,
+  decrement,
+  incrementByAmount,
+} from './store/slices/counter';
 
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
@@ -28,6 +32,20 @@ function App() {
           }}
         >
           Increment
+        </button>
+        <button
+          onClick={() => {
+            dispatch(decrement());
+          }}
+        >
+          Decrement
+        </button>
+        <button
+          onClick={() => {
+            dispatch(incrementByAmount(2));
+          }}
+        >
+          Increment by 2
         </button>
       </div>
     </>
