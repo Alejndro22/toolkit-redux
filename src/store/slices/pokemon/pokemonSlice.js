@@ -9,7 +9,7 @@ export const pokemonSlice = createSlice({
   },
   reducers: {
     startLoadingPokemons: (state /* action */) => {
-      state.isLoading(true);
+      state.isLoading = true;
 
       // Remember that thanks to RTK i can mutate the state. If it were a traditional reducer:
       // I'd have to use spread to avoid mutating the original state
